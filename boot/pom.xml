@@ -12,6 +12,7 @@
 
     <properties>
         <kotlin.version>1.3.61</kotlin.version>
+        <start-class>com.danielmasegosa.fb.springboot.Application</start-class>
     </properties>
 
     <dependencies>
@@ -29,6 +30,19 @@
             <groupId>com.danielmasegosa</groupId>
             <artifactId>infrastructure</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!--Tests Dependencies-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
